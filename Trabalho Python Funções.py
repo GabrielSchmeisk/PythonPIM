@@ -7,12 +7,11 @@ import time
 def coletar_dados(): # Função de Coleta de Dados
     while True: # Loop para caso o usuário não siga os parâmetros de login
         print("\n-----------------------\n")
-        print("Seja bem-vindo usuário, agradecemos por usar nossa aplicação!")
         nome = input("Digite seu nome:").strip().capitalize() # .strip remove os espaços em branco e o .capitalize deixa apenas a primeira letra maiúscula
         if nome.isalpha(): # Método para que só seja possível inserir letras do alfabeto na váriavel "nome"
             try: # Inicia uma verificação de erros no bloco de código e se comunica com o except.
                 
-                idade = int(input(f"Ótimo {nome}! Agora diga sua idade. (Apenas números): "))
+                idade = int(input(f"Seja bem-vindo {nome}! Por gentileza, digite sua idade. (Apenas números): "))
                 if idade < 15 or idade > 120: # Verifica se a idade é menor que 15 e maior que 120, caso seja, retornará uma mensagem e reiniciará o loop
                     print("\nDigite uma idade válida (entre 15 e 120 anos).\n")
                     continue # reinicia o loop
@@ -28,7 +27,7 @@ def coletar_dados(): # Função de Coleta de Dados
 
         hora = datetime.now() # Usa o módulo datatime para criar uma váriavel que puxa o horário local
         print("\n-----------------------\n")
-        print("Logado")
+        print(f"Seja bem-vindo {nome}, agradecemos por usar nossa aplicação!")
         print(f"Nome: {nome}")
         print(f"Idade: {idade} anos")
         print("Horário:", hora.strftime("%H:%M\n")) # .strftime("") é um método para podermos modificar a formatação do horário.
