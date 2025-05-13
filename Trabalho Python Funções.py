@@ -12,7 +12,7 @@ def coletar_dados(): # Função de Coleta de Dados
             try: # Inicia uma verificação de erros no bloco de código e se comunica com o except.
                 
                 idade = int(input(f"Seja bem-vindo {nome}! Por gentileza, digite sua idade. (Apenas números): "))
-                if idade < 15 or idade > 120: # Verifica se a idade é menor que 15 e maior que 120, caso seja, retornará uma mensagem e reiniciará o loop
+                if idade < 11 or idade > 120: # Verifica se a idade é menor que 11 e maior que 120, caso seja, retornará uma mensagem e reiniciará o loop
                     print("\nDigite uma idade válida (entre 15 e 120 anos).\n")
                     continue # reinicia o loop
                     
